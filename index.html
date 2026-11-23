@@ -155,6 +155,9 @@
     .card:hover, .card:focus-visible { background: var(--bg); color: var(--ink); border-color: var(--cyan); border-bottom: 2px solid var(--cyan); }
     .card:hover strong { color: var(--amber); }
 
+    .appstore { display: inline-flex; align-items: center; gap: 10px; background: var(--cyan); font-size: 11px; padding: 12px 16px; }
+    .appstore svg { width: 16px; height: 18px; }
+
     footer { color: var(--dim); text-align: center; font-size: 18px; }
     .theme-toggle { font: inherit; color: var(--dim); background: none; border: 2px solid var(--edge); padding: 0 8px; cursor: pointer; }
     .theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
@@ -288,6 +291,12 @@
           <a class="card" href="https://slackwater.xyz/tides/us/ma/boston/?utm_source=clarkbw.dev&amp;utm_medium=referral&amp;utm_campaign=personal_site&amp;utm_content=tides_boston">
             <strong>Boston Harbor tide times</strong>
             Today's high and low tides for Boston, Massachusetts
+          </a>
+        </div>
+        <div class="links" style="margin-top:24px">
+          <a class="btn appstore" href="https://apps.apple.com/app/slackwater-tides-current/id6813654837?ct=clarkbw.dev" aria-label="Download Slackwater: Tides &amp; Current on the App Store">
+            <svg viewBox="0 0 8 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 0h1v1H4zM3 1h1v1H3zM1 2h2v1h2V2h2v1h1v1H7v2h1v1H7v1H5v1H3V8H1V7H0V3h1z"/></svg>
+            <span>Download on the App Store</span>
           </a>
         </div>
       </section>
