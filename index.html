@@ -1,21 +1,325 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bryan Clark · Product Leader for Developer Tools, Databases &amp; AI</title>
+  <meta name="description" content="Bryan Clark is Director of Product Management at Databricks leading Lakebase and Neon serverless Postgres. Previously VP Product at Neon, product lead at Timescale, GitHub, and Mozilla Firefox. Builder of Slackwater, a tides app.">
+  <meta name="author" content="Bryan Clark">
+  <link rel="canonical" href="https://clarkbw.dev/">
+  <meta name="theme-color" content="#0b0f14">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Bryan Clark · Product for Developers">
+  <meta property="og:description" content="Director of Product at Databricks (Lakebase + Neon). DevTools, databases, AI, and product-led growth.">
+  <meta property="og:url" content="https://clarkbw.dev/">
+  <meta name="twitter:card" content="summary">
 
-    <title>Bryan Clark : Product Leadership</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Hello</h1>
-    </div>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%230b0f14'/%3E%3Cpath fill='%2339ff88' d='M1 1h2v1H1zM1 2h1v4H1zM1 6h2v1H1zM4 1h1v6H4zM5 6h2v1H5z'/%3E%3C/svg%3E">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bryan Clark",
+    "url": "https://clarkbw.dev/",
+    "jobTitle": "Director of Product Management",
+    "worksFor": { "@type": "Organization", "name": "Databricks" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Victoria", "addressRegion": "BC", "addressCountry": "CA" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Clarkson University" },
+    "knowsAbout": ["Product Management", "Developer Tools", "Postgres", "Databases", "Product-Led Growth", "AI", "User Experience Design"],
+    "sameAs": ["https://www.linkedin.com/in/clarkbw", "https://github.com/clarkbw"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #121922;
+      --ink: #d7e3ee;
+      --dim: #7d8b99;
+      --green: #39ff88;
+      --cyan: #3ad7ff;
+      --amber: #ffcc33;
+      --pink: #ff5c8a;
+      --edge: #24303d;
+      --px: 4px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #f2efe6; --panel: #fffdf6; --ink: #1b2430; --dim: #5b6672;
+        --green: #0a8a45; --cyan: #0b6fa4; --amber: #a66b00; --pink: #c2185b; --edge: #c9c2b0;
+      }
+    }
+    :root[data-theme="light"] {
+      --bg: #f2efe6; --panel: #fffdf6; --ink: #1b2430; --dim: #5b6672;
+      --green: #0a8a45; --cyan: #0b6fa4; --amber: #a66b00; --pink: #c2185b; --edge: #c9c2b0;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "VT323", ui-monospace, Menlo, Consolas, monospace;
+      font-size: 22px;
+      line-height: 1.35;
+      image-rendering: pixelated;
+      background-image:
+        linear-gradient(var(--edge) 1px, transparent 1px),
+        linear-gradient(90deg, var(--edge) 1px, transparent 1px);
+      background-size: 32px 32px;
+      background-attachment: fixed;
+    }
+    body::after { /* scanlines */
+      content: ""; position: fixed; inset: 0; pointer-events: none;
+      background: repeating-linear-gradient(0deg, rgba(0,0,0,.12) 0 1px, transparent 1px 3px);
+      mix-blend-mode: multiply;
+    }
+    a { color: var(--cyan); text-decoration: none; border-bottom: 2px dotted currentColor; }
+    a:hover, a:focus-visible { color: var(--bg); background: var(--cyan); border-bottom-color: transparent; outline: none; }
+
+    .wrap { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
+
+    h1, h2, h3, .pixel { font-family: "Press Start 2P", ui-monospace, monospace; font-weight: 400; letter-spacing: 0; }
+    h1 { font-size: clamp(22px, 6vw, 40px); line-height: 1.3; margin: 0 0 12px; color: var(--green); text-shadow: var(--px) var(--px) 0 var(--edge); }
+    h2 { font-size: 14px; color: var(--amber); margin: 0 0 18px; text-transform: uppercase; }
+    h2::before { content: "## "; color: var(--dim); }
+    h3 { font-size: 11px; line-height: 1.6; margin: 0; color: var(--ink); }
+
+    /* chunky pixel frame */
+    .box {
+      background: var(--panel);
+      padding: 24px 22px;
+      margin: 0 0 32px;
+      box-shadow:
+        0 calc(-1 * var(--px)) 0 0 var(--ink),
+        0 var(--px) 0 0 var(--ink),
+        calc(-1 * var(--px)) 0 0 0 var(--ink),
+        var(--px) 0 0 0 var(--ink),
+        calc(2 * var(--px)) calc(2 * var(--px)) 0 var(--px) var(--edge);
+    }
+
+    .bar { display: flex; align-items: center; gap: 8px; margin: -24px -22px 20px; padding: 8px 12px; background: var(--edge); font-size: 18px; color: var(--dim); }
+    .dot { width: 12px; height: 12px; }
+    .dot.r { background: var(--pink); } .dot.y { background: var(--amber); } .dot.g { background: var(--green); }
+    .bar span:last-child { margin-left: auto; }
+
+    .hero { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; }
+    .avatar { width: 120px; height: 120px; }
+    @media (max-width: 560px) { .hero { grid-template-columns: 1fr; } .avatar { width: 96px; height: 96px; } }
+
+    .prompt { color: var(--green); }
+    .prompt::before { content: "$ "; color: var(--dim); }
+    .tagline { color: var(--dim); margin: 0 0 8px; }
+    .cursor { display: inline-block; width: .55em; height: 1em; background: var(--green); vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+    .tags li { font-size: 18px; padding: 0 8px; border: 2px solid var(--edge); color: var(--dim); }
+
+    .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+    .btn {
+      font-family: "Press Start 2P", monospace; font-size: 10px; padding: 10px 12px;
+      border: none; color: var(--bg); background: var(--green);
+      box-shadow: 0 var(--px) 0 0 var(--edge);
+    }
+    .btn:hover, .btn:focus-visible { background: var(--amber); color: var(--bg); transform: translateY(2px); box-shadow: 0 2px 0 0 var(--edge); }
+
+    /* resume */
+    .job { display: grid; grid-template-columns: 150px 1fr; gap: 6px 20px; padding: 14px 0; border-top: 2px dashed var(--edge); }
+    .job:first-of-type { border-top: none; padding-top: 0; }
+    .when { color: var(--dim); }
+    .job p { margin: 4px 0 0; }
+    .co { color: var(--cyan); }
+    @media (max-width: 560px) { .job { grid-template-columns: 1fr; } }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+    ul.plain { margin: 0; padding: 0; list-style: none; }
+    ul.plain li::before { content: "> "; color: var(--green); }
+    ul.plain li { margin: 4px 0; }
+
+    /* slackwater */
+    .tide { display: block; width: 100%; height: 48px; margin: 4px 0 16px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+    .card { display: block; padding: 14px; border: 2px solid var(--edge); color: var(--ink); background: var(--bg); }
+    .card strong { display: block; font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.6; color: var(--cyan); margin-bottom: 6px; }
+    .card:hover, .card:focus-visible { background: var(--bg); color: var(--ink); border-color: var(--cyan); border-bottom: 2px solid var(--cyan); }
+    .card:hover strong { color: var(--amber); }
+
+    .appstore { display: inline-flex; align-items: center; gap: 10px; background: var(--cyan); font-size: 11px; padding: 12px 16px; }
+    .appstore svg { width: 16px; height: 18px; }
+
+    footer { color: var(--dim); text-align: center; font-size: 18px; }
+    .theme-toggle { font: inherit; color: var(--dim); background: none; border: 2px solid var(--edge); padding: 0 8px; cursor: pointer; }
+    .theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="box">
+      <div class="bar" aria-hidden="true"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span>~/clarkbw.dev</span></div>
+      <div class="hero">
+        <!-- 16x16 pixel-art portrait -->
+        <svg class="avatar" viewBox="0 0 16 16" shape-rendering="crispEdges" role="img" aria-label="Pixel art portrait of Bryan Clark">
+          <rect width="16" height="16" fill="var(--edge)"/>
+          <path fill="#6b4a2b" d="M4 2h8v1h1v3h-1V4H4v2H3V3h1z"/>
+          <path fill="#f1c27d" d="M4 4h8v6h-1v1H5v-1H4z"/>
+          <path fill="#1b2430" d="M5 6h2v1H5zM9 6h2v1H9z"/>
+          <path fill="#c68642" d="M7 8h2v1H7z"/>
+          <path fill="#6b4a2b" d="M4 9h1v1h6V9h1v2h-1v1H5v-1H4z"/>
+          <path fill="var(--green)" d="M3 13h10v3H3z"/>
+          <path fill="var(--bg)" d="M7 13h2v1H7z"/>
+        </svg>
+        <div>
+          <h1>Bryan Clark</h1>
+          <p class="tagline">Product leader for developer tools, databases &amp; AI &middot; Victoria, BC</p>
+          <p class="prompt" aria-label="whoami: engineer, designer, product manager">whoami → engineer + designer + PM <span class="cursor" aria-hidden="true"></span></p>
+          <div class="links">
+            <a class="btn" href="https://www.linkedin.com/in/clarkbw" rel="me">LinkedIn</a>
+            <a class="btn" href="https://github.com/clarkbw" rel="me">GitHub</a>
+            <a class="btn" href="#slackwater">Slackwater</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="box" aria-labelledby="about">
+        <h2 id="about">README</h2>
+        <p>I started out writing file systems and kernel code, spent years designing for GNOME, Red Hat, and Mozilla, and then moved into product management. The best products I've worked on didn't trade engineering off against design. They got both right.</p>
+        <p>These days I lead product for <strong>Lakebase</strong> and <strong>Neon</strong> at Databricks: serverless Postgres for developers and AI agents.</p>
+        <ul class="tags" aria-label="Focus areas">
+          <li>devtools</li><li>postgres</li><li>AI</li><li>PLG</li><li>pricing</li><li>open source</li><li>UX</li>
+        </ul>
+      </section>
+
+      <section class="box" aria-labelledby="resume">
+        <h2 id="resume">git log --career</h2>
+
+        <article class="job">
+          <div class="when">2025 – now</div>
+          <div>
+            <h3>Director of Product Management · <span class="co">Databricks</span></h3>
+            <p>I lead the Lakebase and Neon product org: 20+ people across Product, Design, Docs, and Marketing. I joined when Databricks acquired Neon for $1B.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when">2024 – 2025</div>
+          <div>
+            <h3>VP of Product · <span class="co">Neon</span></h3>
+            <p>Ran Product, Design, Data, Docs &amp; Marketing and grew the team from 5 to ~25. Neon grew 20% month over month through pure product-led growth, and I led the repricing from feature-gated tiers to simple metered plans.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when">2021 – 2024</div>
+          <div>
+            <h3>Sr. Director of Product · <span class="co">Timescale</span></h3>
+            <p>Led Product and Design for Timescale Cloud. In year one the customer base grew 300% and revenue 400%.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when">2017 – 2021</div>
+          <div>
+            <h3>Director of Product · <span class="co">GitHub</span></h3>
+            <p>Launched GitHub Packages and the GitHub Container Registry (ghcr.io), worked on the npm acquisition team, and led Open Source programs and GitHub Sponsors. Earlier I owned PRs, code review, and releases, and shipped security alerts, the dependency graph, and token scanning.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when">2008 – 2017</div>
+          <div>
+            <h3>Sr. Product Manager &amp; Design Lead · <span class="co">Mozilla</span></h3>
+            <p>Led the rebuild of Firefox DevTools in React, Reader Mode, the Pocket integration, and privacy-respecting new-tab Tiles. Before that I was Head of Design for Thunderbird.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when">2000 – 2008</div>
+          <div>
+            <h3>Interaction Designer · <span class="co">Red Hat</span> &amp; <span class="co">GNOME</span></h3>
+            <p>Designed GNOME desktop apps including Evince and NetworkManager, and the Mugshot skunkworks project. Earlier I was a research intern at IBM, where I co-invented a threaded chat interface (patented).</p>
+          </div>
+        </article>
+
+        <div class="grid2" style="margin-top:20px">
+          <div>
+            <h3 style="color:var(--amber);margin-bottom:8px">Education</h3>
+            <ul class="plain">
+              <li>MS, Computer Science, Clarkson University</li>
+              <li>BS, Computer Science, Clarkson University</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color:var(--amber);margin-bottom:8px">Angel investing</h3>
+            <ul class="plain">
+              <li>Replay.io · Boxbase · Ardor</li>
+              <li>DevCycle <span class="when">(acq. Dynatrace)</span></li>
+              <li>Battlesnake <span class="when">(acq. DevCycle)</span> · Fable</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="box" id="slackwater" aria-labelledby="sw">
+        <h2 id="sw">Side project: Slackwater</h2>
+        <svg class="tide" viewBox="0 0 64 6" preserveAspectRatio="none" shape-rendering="crispEdges" aria-hidden="true">
+          <path fill="var(--cyan)" d="M0 3h4v1h4v1h8V4h4V3h4V2h8v1h4v1h4v1h8V4h4V3h4V2h8v4H0z"/>
+        </svg>
+        <p>I build <a href="https://slackwater.xyz/?utm_source=clarkbw.dev&amp;utm_medium=referral&amp;utm_campaign=personal_site&amp;utm_content=intro">Slackwater</a>, a tide and current app for paddlers, sailors, and anyone else who plans around the water. It tells you when the tide turns and when slack water is, without the clutter.</p>
+        <div class="cards">
+          <a class="card" href="https://slackwater.xyz/?utm_source=clarkbw.dev&amp;utm_medium=referral&amp;utm_campaign=personal_site&amp;utm_content=app_card">
+            <strong>Slackwater tide app</strong>
+            Tide charts, currents, and slack-water times
+          </a>
+          <a class="card" href="https://slackwater.xyz/tides/ca/bc/victoria/?utm_source=clarkbw.dev&amp;utm_medium=referral&amp;utm_campaign=personal_site&amp;utm_content=tides_victoria">
+            <strong>Victoria, BC tide times</strong>
+            Today's high and low tides for Victoria Harbour and the Salish Sea
+          </a>
+          <a class="card" href="https://slackwater.xyz/tides/us/ma/boston/?utm_source=clarkbw.dev&amp;utm_medium=referral&amp;utm_campaign=personal_site&amp;utm_content=tides_boston">
+            <strong>Boston Harbor tide times</strong>
+            Today's high and low tides for Boston, Massachusetts
+          </a>
+        </div>
+        <div class="links" style="margin-top:24px">
+          <a class="btn appstore" href="https://apps.apple.com/app/slackwater-tides-current/id6813654837?ct=clarkbw.dev" aria-label="Download Slackwater: Tides &amp; Current on the App Store">
+            <svg viewBox="0 0 8 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 0h1v1H4zM3 1h1v1H3zM1 2h2v1h2V2h2v1h1v1H7v2h1v1H7v1H5v1H3V8H1V7H0V3h1z"/></svg>
+            <span>Download on the App Store</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="y">2026</span> Bryan Clark · built by hand, no framework · <button class="theme-toggle" id="theme" type="button" aria-label="Toggle color theme">[ theme ]</button></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    (function () {
+      var root = document.documentElement, key = 'theme';
+      try { var saved = localStorage.getItem(key); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+      document.getElementById('theme').addEventListener('click', function () {
+        var cur = root.getAttribute('data-theme') ||
+          (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        var next = cur === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(key, next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
 </html>
